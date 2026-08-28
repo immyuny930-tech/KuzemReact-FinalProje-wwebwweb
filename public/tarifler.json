@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "yemekAdi": "Mantı",
+    "pisirmeSuresi": 45,
+    "zorluk": "Orta",
+    "vejetaryan": false,
+    "malzemeler": ["Un", "Kıyma", "Soğan", "Yoğurt"]
+  },
+  {
+    "id": 2,
+    "yemekAdi": "Mercimek Çorbası",
+    "pisirmeSuresi": 30,
+    "zorluk": "Kolay",
+    "vejetaryan": true,
+    "malzemeler": ["Mercimek", "Soğan", "Havuç", "Patates"]
+  },
+  {
+    "id": 3,
+    "yemekAdi": "Menemen",
+    "pisirmeSuresi": 20,
+    "zorluk": "Kolay",
+    "vejetaryan": true,
+    "malzemeler": ["Yumurta", "Domates", "Biber", "Tuz"]
+  }
+]
