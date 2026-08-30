@@ -10,7 +10,7 @@ function TarifKarti({ tarif }: TarifKartiProps) {
   const favoride = favoriMi(tarif.id);
 
   return (
-    <div className="bg-white border-2 border-red-700 rounded-lg p-4 w-full shadow-md">
+    <div className="bg-white border-2 border-red-700 rounded-lg p-4 w-full shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-200">
 
       <h2 className="text-lg font-bold text-red-700 text-center mb-3">
         {tarif.yemekAdi}
