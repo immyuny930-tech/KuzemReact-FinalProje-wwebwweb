@@ -10,7 +10,7 @@ function TarifKarti({ tarif }: TarifKartiProps) {
   const favoride = favoriMi(tarif.id);
 
   return (
-    <div className="bg-white border-2 border-red-700 rounded-lg p-4 max-w-sm shadow-md">
+    <div className="bg-white border-2 border-red-700 rounded-lg p-4 w-full shadow-md">
 
       <h2 className="text-lg font-bold text-red-700 text-center mb-3">
         {tarif.yemekAdi}
@@ -32,15 +32,18 @@ function TarifKarti({ tarif }: TarifKartiProps) {
           >
             {favoride ? "Favorilerden Çıkar" : "Favorilere Ekle"}
           </button>
+
         </div>
 
         <div className="flex-1 text-sm">
           <h3 className="font-semibold mb-1">Malzemeler:</h3>
+
           <ul className="list-disc list-inside">
             {tarif.malzemeler.map((malzeme, index) => (
               <li key={index}>{malzeme}</li>
             ))}
           </ul>
+          
         </div>
 
       </div>
