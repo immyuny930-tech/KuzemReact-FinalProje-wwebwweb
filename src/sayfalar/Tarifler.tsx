@@ -1,6 +1,7 @@
 import useFetch from "../kancalar/useFetch";
 import TarifKarti from "../components/TarifKarti";
 import type { Tarif } from "../tipler/Tarif"
+import { Link } from "react-router-dom";
 
 
 function Tarifler() {
@@ -23,7 +24,9 @@ function Tarifler() {
       {veri && (
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
           {veri.map((tarif) => (
-            <TarifKarti key={tarif.id} tarif={tarif} />
+            <Link key={tarif.id} to={`/tarif/${tarif.id}`}>
+              <TarifKarti tarif={tarif} />
+            </Link>
           ))}
         </div>
       )}
