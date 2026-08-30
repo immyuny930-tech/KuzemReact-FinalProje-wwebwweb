@@ -13,14 +13,16 @@ function App() {
     <TarifProvider>
       <BrowserRouter>
         <Navbar />
-
-        <Routes>
-          <Route path="/" element={<AnaSayfa />} />
-          <Route path="/tarifler" element={<Tarifler />} />
-          <Route path="/tarif/:id" element={<TarifDetay />} />
-          <Route path="/tarif-ekle" element={<TarifEkle />} />
-          <Route path="/favoriler" element={<Favoriler />} />
-        </Routes>
+        
+        <div className="px-4 sm:px-4 py-4 max-w-6xl mx-auto">
+          <Routes >
+            <Route path="/" element={<AnaSayfa />} />
+            <Route path="/tarifler" element={<Tarifler />} />
+            <Route path="/tarif/:id" element={<TarifDetay />} />
+            <Route path="/tarif-ekle" element={<TarifEkle />} />
+            <Route path="/favoriler" element={<Favoriler />} />
+          </Routes>
+        </div>
 
       </BrowserRouter>
     </TarifProvider>
