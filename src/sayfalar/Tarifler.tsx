@@ -2,10 +2,14 @@ import useFetch from "../kancalar/useFetch";
 import TarifKarti from "../components/TarifKarti";
 import type { Tarif } from "../tipler/Tarif"
 import { Link } from "react-router-dom";
+import useLocalStorage from "../kancalar/useLocalStorage";
 
 
 function Tarifler() {
   const { veri, yukleniyor, hata, tekrarDene } = useFetch<Tarif[]>("/tarifler.json");
+  const [kullaniciTarifleri] = useLocalStorage<Tarif[]>("kullaniciTarifleri", []);
+
+  const tumTarifler = [...(veri ?? []), ...kullaniciTarifleri];
 
 
   return (
@@ -21,9 +25,9 @@ function Tarifler() {
         </div>
       )}
 
-      {veri && (
+      {!yukleniyor && (
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4">
-          {veri.map((tarif) => (
+          {tumTarifler.map((tarif) => (
             <Link key={tarif.id} to={`/tarif/${tarif.id}`}>
               <TarifKarti tarif={tarif} />
             </Link>
