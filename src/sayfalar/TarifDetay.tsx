@@ -31,7 +31,7 @@ function TarifDetay() {
 
   return (
     <div>
-      <Link to="/tarifler" className="text-red-700 hover:underline">Geri</Link>
+      <Link to="/tarifler" className="text-red-700 hover:underline">&larr; Geri</Link>
       <TarifKarti tarif={tarif} />
     </div>
   );

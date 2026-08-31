@@ -22,5 +22,29 @@
     "zorluk": "Kolay",
     "vejetaryan": true,
     "malzemeler": ["Yumurta", "Domates", "Biber", "Tuz"]
+  },
+  {
+    "id": 4,
+    "yemekAdi": "İmam Bayıldı",
+    "pisirmeSuresi": 50,
+    "zorluk": "Orta",
+    "vejetaryan": true,
+    "malzemeler": ["Patlıcan", "Soğan", "Domates", "Sarımsak", "Zeytinyağı"]
+  },
+  {
+    "id": 5,
+    "yemekAdi": "Köfte",
+    "pisirmeSuresi": 35,
+    "zorluk": "Kolay",
+    "vejetaryan": false,
+    "malzemeler": ["Kıyma", "Soğan", "Ekmek İçi", "Yumurta", "Baharat"]
+  },
+  {
+    "id": 6,
+    "yemekAdi": "Karnıyarık",
+    "pisirmeSuresi": 60,
+    "zorluk": "Zor",
+    "vejetaryan": false,
+    "malzemeler": ["Patlıcan", "Kıyma", "Soğan", "Domates", "Biber"]
   }
 ]
