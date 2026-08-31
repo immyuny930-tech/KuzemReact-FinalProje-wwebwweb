@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar(){
     return(
-        <nav className="bg-red-700 text-white px-6 py-6 flex gap-6 items-center">
+        <nav className="bg-red-700 text-white px-4 sm:px-6 py-4 flex flex-wrap gap-x-6 gap-y-2 items-center">
 
             <div className="flex flex-col mr-4">
                 <h1 className="font-bold text-lg leading-tight">Tarif Defteri</h1>
