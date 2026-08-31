@@ -27,7 +27,7 @@ npm run dev
 
 ## Canlı Demo
 
-[Deploy linki buraya gelecek]
+https://kuzem-react-final-proje-wwebwweb.vercel.app/
 
 ## Ekran Görüntüsü
 
