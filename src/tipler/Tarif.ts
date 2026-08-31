@@ -1,3 +1,4 @@
+// sitedeki her tarifin sahip olmasi gereken alanalar
 export interface Tarif {
   id: number;
   yemekAdi: string;
@@ -8,4 +9,3 @@ export interface Tarif {
   resim?: string
 }
 
-// 

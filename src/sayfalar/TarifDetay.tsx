@@ -5,13 +5,14 @@ import TarifKarti from "../components/TarifKarti";
 import type { Tarif } from "../tipler/Tarif";
 
 function TarifDetay() {
-  const { id } = useParams();
+  const { id } = useParams(); // URLdeki :id kısmını okur, orn /tarif/3 -> "3"
   const { veri, yukleniyor, hata, tekrarDene } = useFetch<Tarif[]>("/tarifler.json");
   const [kullaniciTarifleri] = useLocalStorage<Tarif[]>("kullaniciTarifleri", []);
 
   const tumTarifler = [...(veri ?? []), ...kullaniciTarifleri];
-  const tarif = tumTarifler.find((t) => t.id === Number(id));
+  const tarif = tumTarifler.find((t) => t.id === Number(id)); // id string geldigi icin Number()a ceviriyoruz
 
+  // sirasiyla: yukleniyor mu -> hata var mi -> tarif bulunamadi mi -> icerik
   if (yukleniyor) return <p className="text-gray-500">Yükleniyor...</p>;
 
   if (hata) {

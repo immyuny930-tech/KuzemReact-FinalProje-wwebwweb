@@ -5,6 +5,7 @@ interface TarifKartiProps {
   tarif: Tarif;
 }
 
+// tek bir tarifi kart olarak gosteren, tekrar kullanabilir component
 function TarifKarti({ tarif }: TarifKartiProps) {
   const { favoriEkle, favoriCikar, favoriMi } = useTarifContext();
   const favoride = favoriMi(tarif.id);

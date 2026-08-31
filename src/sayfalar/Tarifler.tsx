@@ -9,6 +9,7 @@ function Tarifler() {
   const { veri, yukleniyor, hata, tekrarDene } = useFetch<Tarif[]>("/tarifler.json");
   const [kullaniciTarifleri] = useLocalStorage<Tarif[]>("kullaniciTarifleri", []);
 
+  // APIden gelen ve kullanicinin kendi ekledigi tarifleri tek listede birlestir
   const tumTarifler = [...(veri ?? []), ...kullaniciTarifleri];
 
 

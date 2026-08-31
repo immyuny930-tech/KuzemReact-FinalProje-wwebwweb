@@ -3,6 +3,7 @@ import { useTarifContext } from "../context/TarifContext";
 import TarifKarti from "../components/TarifKarti";
 
 function Favoriler() {
+    // fetch yok favoriler zaten contextte hazir bekliyor
     const { favoriler } = useTarifContext();
 
     return (

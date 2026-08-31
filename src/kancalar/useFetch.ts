@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
+// veri cekme + yukleniyor/hata durumlarini tek yerden toneten custom hook
 function useFetch<T>(url: string) {
     const [veri, setVeri] = useState<T | null>(null);
     const [yukleniyor, setYukleniyor] = useState(true);
@@ -20,11 +21,13 @@ function useFetch<T>(url: string) {
             .finally(() => setYukleniyor(false));
     }, [url]);
 
+    // sayfa ilk acildiginda otomatik veri cek
     useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         veriGetir();
     }, [veriGetir]);
 
+    // tekrarDene = 'retry' butonunun cagiracagi fonksion, ayni fetchi tekrar calistirir
     return { veri, yukleniyor, hata, tekrarDene: veriGetir };
 
  }

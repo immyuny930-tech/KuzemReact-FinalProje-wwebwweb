@@ -18,7 +18,7 @@ function TarifEkle() {
   const [hata, setHata] = useState("");
 
   const gonder = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // formun sayfa yenilenmesini engeller
 
     if (yemekAdi.trim() === "") {
       setHata("Yemek adı boş olamaz.");
